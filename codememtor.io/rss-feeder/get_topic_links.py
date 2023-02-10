@@ -13,25 +13,34 @@ def get_response(url: str):
     return res
 
 
-def soupnize(html: str) -> bs:
-    return bs(html, "lxml")
+class Cache:
+    FILENAME = "index.html"
+
+    @classmethod
+    def create_cache(cls, url: str):
+        response = get_response(url)
+        soup = bs(response.text, "lxml")
+
+        with open(cls.FILENAME, "w") as f:
+            f.write(soup.prettify())
+
+        return soup
+
+    @classmethod
+    def load_cache(cls):
+        with open(cls.FILENAME, "r") as f:
+            return bs(f.read(), "lxml")
 
 
 def get_rss_topic_urls():
-    filename = "index.html"
+    topics_url = "https://news.yahoo.co.jp/rss"
 
     if not Path("./index.html").exists():
         print(">>> Create cache :^)")
-        topics_url = "https://news.yahoo.co.jp/rss"
-        response = get_response(topics_url)
-        soup = soupnize(response.text)
-
-        with open(filename, "w") as f:
-            f.write(soup.prettify())
+        soup = Cache.create_cache(topics_url)
     else:
-        print(">>> Load Cache")
-        with open(filename, "r") as f:
-            soup = soupnize(f.read())
+        print(">>> Load Cache D:")
+        soup = Cache.load_cache()
 
     # extraction topics
     topics = soup.find_all("li", class_="sc-dLtPhm")

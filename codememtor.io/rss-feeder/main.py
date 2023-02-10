@@ -3,27 +3,21 @@ from get_topic_links import get_rss_topic_urls
 
 
 def prettify(d: dict) -> None:
-    """
-    rss: {
-        "channel" : {
-            "title"
-            "item" : [
-                {item},
-                {item},
-                {item},
-            ]
-        }
-    }
-    """
-    print("TITLE : {}".format(d["rss"]["channel"]["title"]))
+    if "rss" not in d:
+        return
 
-    # simple validation
-    if "channel " in d["rss"]:
-        if "title" in d["rss"]["channel"]:
-            for item in d["rss"]["channel"]["item"]:
-                print()
-                print(item["title"])
-                print(item["pubDate"])
+    if "channel" not in d["rss"]:
+        return
+
+    if "title" in d["rss"]["channel"]:
+        print("TITLE : {}".format(d["rss"]["channel"]["title"]))
+
+    if "item" in d["rss"]["channel"]:
+        for item in d["rss"]["channel"]["item"]:
+            print()
+            print(item["title"])
+            print(item["pubDate"])
+    print()
 
 
 def main():

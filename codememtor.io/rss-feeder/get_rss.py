@@ -1,5 +1,4 @@
 import time
-from pprint import pprint
 
 import requests
 import xmltodict
@@ -21,10 +20,4 @@ def get_rss(url: str) -> dict:
     print(f">>> RSS FROM {full_link}")
 
     response = get_respones(full_link)
-
-    #  TODO: convert xml to json
-    xml = response.text
-
-    d = xmltodict.parse(xml)
-
-    return d
+    return xmltodict.parse(response.text)
