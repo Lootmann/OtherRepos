@@ -1,0 +1,31 @@
+/* #app { } */
+
+#app > * {
+  font-size: 20px;
+}
+
+#header {
+  padding: 10px;
+}
+
+#main {
+  padding: 10px;
+  margin: 10px;
+  font-size: 25px;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  background-color: burlywood;
+}
+
+.button {
+  padding: 5px 10px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+.button:hover {
+  transition: all 100ms;
+  background-color: ghostwhite;
+}
