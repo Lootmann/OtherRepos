@@ -2,7 +2,7 @@ import React from "react";
 
 export function Header() {
   return (
-    <div className="flex flex-col gap-4 p-2">
+    <div className="flex flex-col gap-4 px-4 py-2">
       <header className="flex justify-between gap-4">
         <p>book</p>
 
