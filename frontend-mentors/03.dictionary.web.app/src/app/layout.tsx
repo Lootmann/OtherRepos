@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="flex flex-col bg-slate-400 text-xl">
-        <div className="w-2/3 bg-slate-500 mx-auto">
+      <body className="bg-slate-400 text-xl">
+        <div className="w-2/3 flex flex-col gap-2 bg-slate-500 mx-auto">
           <Header />
           <div className="p-2">{children}</div>
         </div>
