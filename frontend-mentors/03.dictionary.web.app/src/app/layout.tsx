@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-slate-400 text-xl">
-        <div className="w-2/3 flex flex-col gap-2 bg-slate-500 mx-auto">
+        <div className="w-2/3 flex flex-col gap-2 bg-slate-400 mx-auto">
           <Header />
           <div className="p-2">{children}</div>
         </div>
