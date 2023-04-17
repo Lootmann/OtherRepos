@@ -1,28 +1,27 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { WordComponent } from "./Word";
 
 export default function Home() {
   const [searchWord, setSearchWord] = useState<string>("");
+  const [word, setWord] = useState<TWord | null>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(e);
-    console.log(searchWord);
 
-    // TODO: fetch def of word
-    // TODO: add query string
     const res = await fetch(
       `http://localhost:3000/api/dict?word=${searchWord}`
     );
     // TODO: validation
     const data = await res.json();
-    console.log(data);
+
+    // TODO: use State def
+    setWord(data["meanings"]);
   }
 
   return (
     <main className="flex flex-col gap-4">
-      {/* TODO: submit, fetch dict api */}
       <form
         method="post"
         className="flex gap-4 bg-slate-900 rounded-md pl-2"
@@ -45,9 +44,9 @@ export default function Home() {
         />
       </form>
 
-      <div className="p-2">
-        <h1 className="">Hello World</h1>
-      </div>
+      <hr className="border-slate-600" />
+
+      {word && <WordComponent word={word} />}
     </main>
   );
 }
