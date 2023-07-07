@@ -1,0 +1,13 @@
+header > ul {
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  background-color: darkgray;
+}
+
+header > ul > li {
+  list-style-type: none;
+  border: 2px solid black;
+  font-size: 25px;
+  padding: 0px 5px;
+}

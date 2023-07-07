@@ -1,0 +1,13 @@
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'components/header.css' %}">
+{% endblock extracss %}
+
+<header>
+  <ul>
+    <li>Logo</li>
+    <li><a href="{% url 'words:index' %}">Index</a></li>
+    <li><a href="{% url 'words:list' %}">Words</a></li>
+  </ul>
+</header>
