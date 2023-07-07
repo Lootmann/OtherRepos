@@ -11,5 +11,21 @@ words/index.html
 
 {% block main %}
 <h1>words/index.html</h1>
-<p>hello world</p>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <p><label for="spell">{{ form.spell.label }}</label></p>
+    {{ form.spell }}
+  </div>
+
+  <div>
+    <p><label for="meaning">{{ form.meaning.label }}</label></p>
+    {{ form.meaning }}
+  </div>
+
+  <div>
+    <button type="submit" class="btn">Submit</button>
+  </div>
+</form>
 {% endblock main %}

@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'words/word_list.css'%}">
+{% endblock extracss %}
 
 {% block title %}
 word_list.html
@@ -7,5 +12,21 @@ word_list.html
 {% block main %}
 <h1>words/word_list.html</h1>
 
-<p>hello world</p>
+<table>
+  <thead>
+    <tr>
+      <th>Spell</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for word in words  %}
+      <tr>
+        <td>{{ word.spell }}</td>
+        <td>{{ word.meaning }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock main %}

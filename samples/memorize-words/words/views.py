@@ -15,12 +15,14 @@ class WordIndexView(generic.View):
         return render(request, self.template_name, {"form": form})
 
     def post(self, request: HttpRequest, *args, **kwargs):
-        form = self.form_class()
+        f = self.form_class(request.POST)
 
-        if form.is_valid():
-            return render(request, self.template_name, {"form": form})
+        if f.is_valid():
+            word = f.save(commit=False)
+            word.save()
+            return render(request, self.template_name, {"form": self.form_class()})
 
-        return render(request, self.template_name, {"form": form})
+        return render(request, self.template_name, {"form": f})
 
 
 class WordListView(generic.ListView):
