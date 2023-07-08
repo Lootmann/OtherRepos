@@ -1,0 +1,5 @@
+<!-- Html is neat. Anyways have 1/3 of the flag: CognitiveCTF{tru3 -->
+/* You need CSS to make pretty pages. Here's part 2/3 of the flag: _d3t3ct1ve_0r_ju5 */
+/* Javascript sure is neat. Anyways part 3/3 of the flag: t_lucky?b009d771} */
+
+CognitiveCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?b009d771}
