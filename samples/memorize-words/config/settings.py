@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # custom apps
     "words.apps.WordsConfig",
+    "examples.apps.ExamplesConfig",
 ]
 
 MIDDLEWARE = [
