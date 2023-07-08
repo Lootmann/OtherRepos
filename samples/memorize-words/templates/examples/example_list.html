@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'examples/example_list.css'%}">
+<link rel="stylesheet" href="{% static 'components/form.css' %}">
+<link rel="stylesheet" href="{% static 'components/table.css' %}">
+{% endblock extracss %}
+
+{% block title %}
+example_list.html
+{% endblock  %}
+
+{% block main %}
+<h1>examples/example_list.html</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Sentence</th>
+      <th>Translation</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for ex in examples %}
+      <tr>
+        <td>{{ ex.word }}</td>
+        <td>{{ ex.sentence }}</td>
+        <td>{{ ex.translation }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock main %}
