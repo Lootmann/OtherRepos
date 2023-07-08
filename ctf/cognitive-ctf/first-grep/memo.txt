@@ -1,0 +1,3 @@
+cat flag | grep -i cognitive
+
+got it :^)
