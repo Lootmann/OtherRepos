@@ -15,6 +15,11 @@ examples/index.html
 <form method="post">
   {% csrf_token %}
   <div>
+    <p><label for="sentence">{{ form.word.label}}</label></p>
+    {{ form.word}}
+  </div>
+ 
+  <div>
     <p><label for="sentence">{{ form.sentence.label}}</label></p>
     {{ form.sentence }}
   </div>
