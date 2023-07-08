@@ -1,6 +1,6 @@
 from django import forms
 
-from words.models import Example
+from examples.models import Example
 
 
 class ExampleForm(forms.ModelForm):
