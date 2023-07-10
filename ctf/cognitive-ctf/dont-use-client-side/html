@@ -1,0 +1,35 @@
+# js in html
+<script type="text/javascript">
+  function verify() {
+    checkpass = document.getElementById("pass").value;
+    split = 4;
+    if (checkpass.substring(0, split) == 'Cogn') {
+      if (checkpass.substring(split*6, split*7) == 'plz_') {
+        if (checkpass.substring(split*1, split*2) == 'itiv') {
+          if (checkpass.substring(split*4, split*5) == 'clie') {
+            if (checkpass.substring(split*8, split*9) == '778}') {
+              if (checkpass.substring(split*3, split*4) == '{no_') {
+                if (checkpass.substring(split*5, split*6) == 'nts_') {
+                  if (checkpass.substring(split*2, split*3) == 'eCTF') {
+                    if (checkpass.substring(split*7, split*8) == '6ea1') {
+                      alert("Password Verified");
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    else {
+      alert("Incorrect password");
+    }
+    
+  }
+</script>
+
+
+# answer
+CognitiveCTF{no_clients_plz_6ea1778}
+
