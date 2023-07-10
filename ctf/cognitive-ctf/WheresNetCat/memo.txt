@@ -1,0 +1,3 @@
+❯ nc shell1.production.cognitivectf.com 48459
+
+CognitiveCTF{nEtCat_Mast3ry_d82195ac}
