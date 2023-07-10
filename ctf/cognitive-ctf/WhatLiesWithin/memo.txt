@@ -1,0 +1,22 @@
+buildings.png: PNG image data, 657 x 438, 8-bit/color RGBA, non-interlaced
+
+ExifTool Version Number         : 12.40
+File Name                       : buildings.png
+Directory                       : .
+File Size                       : 577 KiB
+File Modification Date/Time     : 2023:07:11 06:02:41+09:00
+File Access Date/Time           : 2023:07:11 06:02:59+09:00
+File Inode Change Date/Time     : 2023:07:11 06:02:55+09:00
+File Permissions                : -rw-rw-r--
+File Type                       : PNG
+File Type Extension             : png
+MIME Type                       : image/png
+Image Width                     : 657
+Image Height                    : 438
+Bit Depth                       : 8
+Color Type                      : RGB with Alpha
+Compression                     : Deflate/Inflate
+Filter                          : Adaptive
+Interlace                       : Noninterlaced
+Image Size                      : 657x438
+Megapixels                      : 0.288
