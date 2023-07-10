@@ -1,0 +1,1 @@
+Rewrite Set-Cookie: admin=False
