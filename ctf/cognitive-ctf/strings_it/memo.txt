@@ -1,0 +1,6 @@
+❯ ./strings
+Maybe try the 'strings' function? Take a look at the man page
+
+❯ strings -d strings | grep -i cognitive
+CognitiveCTF{5tRIng5_1T_76dda511}
+
